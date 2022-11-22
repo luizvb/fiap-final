@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Gallery from 'react-photo-gallery'
 import axios from 'axios'
 
-const getPhotos = async () => axios.get('http://ec2-54-175-45-141.compute-1.amazonaws.com:8080/api/v1/images')
+const getPhotos = async () => axios.get('http://ec2-54-175-45-141.compute-1.amazonaws.com:8080/api/v1/images?infos=true')
 
 function GalleryPhotos () {
   const [images, SetImages] = useState(false)
