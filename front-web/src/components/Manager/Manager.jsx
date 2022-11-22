@@ -16,11 +16,11 @@ function About () {
   const { push } = useHistory()
 
   const getPhotos = async () => {
-    const { data } = await axios.get('http://localhost:8080/api/v1/images?infos=true')
+    const { data } = await axios.get('http://ec2-54-175-45-141.compute-1.amazonaws.com:8080/api/v1/images?infos=true')
     SetImages(data)
   }
   const approvePhoto = async ({ _id }) => {
-    await axios.put(`http://localhost:8080/api/v1/images/${_id}`)
+    await axios.put(`http://ec2-54-175-45-141.compute-1.amazonaws.com:8080/api/v1/images/${_id}`)
     getPhotos()
   }
 

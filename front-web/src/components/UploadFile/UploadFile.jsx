@@ -18,7 +18,7 @@ function UploadFile () {
     setLoading(true)
     const formData = new FormData()
     formData.append('image', selectedFile)
-    await axios.post('http://localhost:8080/api/v1/images', formData)
+    await axios.post('http://ec2-54-175-45-141.compute-1.amazonaws.com:8080/api/v1/images', formData)
     setLoading(false)
     setSend(true)
   }
